@@ -1,0 +1,209 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./style.css">
+    <title>PPSU</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                 <li><a href="./index.html">Home</a></li>
+                
+                <li><a href="./result.html">Result</a></li>
+                
+                <li><a href="./aboutus.html">About Us</a></li>
+                
+                <li><a href="./contactus.html">Contact</a></li>
+            </ul>
+            <h1 class="logo">PPSU</h1>
+        </div>
+    </nav>
+<!-- home section starts  -->
+
+<section class="home" id="home" style="overflow-x: hidden;">
+
+    <div class="video-container">
+        <img src="./images/ppsu5.jpg" id="video-slider" >
+    </div>
+
+</section>
+
+<!--    course section start-->
+<div class="wrapper">
+  <h2>Contact us</h2>
+  <div id="error_message">
+     
+  </div>
+  <form action="" id="myform" onsubmit = "return validate();">
+    <div class="input_field">
+        <input type="text" placeholder="Name" id="name">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Subject" id="subject">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Phone" id="phone">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Email" id="email">
+    </div>
+    <div class="input_field">
+        <textarea placeholder="Message" id="message"></textarea>
+    </div>
+    <div class="btn">
+        <input type="submit">
+    </div>
+  </form>
+    <script>
+    function validate(){
+  var name = document.getElementById("name").value;
+  var subject = document.getElementById("subject").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  var error_message = document.getElementById("error_message");
+  
+  error_message.style.padding = "10px";
+  
+  var text;
+  if(name.length < 5){
+    text = "Please Enter valid Name";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(subject.length < 10){
+    text = "Please Enter Correct Subject";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(isNaN(phone) || phone.length != 10){
+    text = "Please Enter valid Phone Number";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(email.indexOf("@") == -1 || email.length < 6){
+    text = "Please Enter valid Email";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(message.length < 5){
+    text = "Please Enter More Than 140 Characters";
+    error_message.innerHTML = text;
+    return false;
+  }
+  alert("Form Submitted Successfully!");
+  return true;
+}
+    </script>
+    
+</div>
+<!--    course section end-->
+<!--    footer starts-->
+   <footer id="contact">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <a href="./index.html">
+
+
+                <img
+                  class="logo2"
+                  src="./images/book.png"
+                  height="70px"
+                  alt="book"/>
+                </a>
+                
+              </br>
+                <h5>Keep observation that much you doesn't need to experience!!! </h5></p>          
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <h6 class="content2">CONNECT VIA</h6>
+              <div class="social-icons">
+                <a
+                  class="icon-link"
+                  href="https://www.facebook.com/">
+                  <i class="fa fa-facebook" aria-hidden="true">
+                  </i>
+                </a>
+
+                <a class="icon-link" href="https://www.instagram.com/">
+                  <i class="fa fa-instagram" aria-hidden="true">
+                  </i>
+                </a>
+
+                <a class="icon-link" href="https://twitter.com/">
+                  <i class="fa fa-twitter" aria-hidden="true">
+                  </i>
+                </a>
+
+                <a
+                  class="icon-link"
+                  href="https://www.linkedin.com/company/">
+                  <i class="fa fa-linkedin" aria-hidden="true">
+                  </i>
+                </a>
+
+                <a
+                  class="icon-link"
+                  href="https://www.youtube.com/">
+                  <i class="fa fa-youtube" aria-hidden="true">
+                  </i>
+                </a>
+
+                <a
+                  class="icon-link"
+                  href="https://api.whatsapp.com/">
+                  <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+
+
+                <br /><br />
+                <p class="contact-details">
+                  <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;
+                  <br /><br />
+                  <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;
+                  +91<br /><br />
+                  <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;
+                  Kosamba, Dhamdod, Surat.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mt-3">
+              <h4><p style="text-align:center">P P SAVANI UNIVERSITY, SURAT</p>
+              </h4>
+              
+              <div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </footer>
+
+
+<!--    footer ends-->
+</body>
+</html>
